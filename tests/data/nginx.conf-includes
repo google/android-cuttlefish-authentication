@@ -1,0 +1,9 @@
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+
+http {
+  access_log /var/log/nginx/access.log;
+  error_log /var/log/nginx/error.log;
+  include {sites_enabled_dir}/*;
+}

@@ -1,0 +1,8 @@
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+
+http {
+  # semicolon intentionally left out
+  include {sites_enabled_dir}/*
+}
